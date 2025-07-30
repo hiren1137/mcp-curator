@@ -1,0 +1,26 @@
+User-agent: *
+Allow: /
+
+# Block search URLs with query parameters
+Disallow: /directory?search=*
+Disallow: /*?search=*
+Disallow: /*?query=*
+Disallow: /*?q=*
+
+# Block pagination URLs
+Disallow: /directory?page=*
+Disallow: /*?page=*
+
+# Block filter combinations
+Disallow: /directory?*&*
+
+# Allow important pages
+Allow: /
+Allow: /directory
+Allow: /categories
+Allow: /category/*
+Allow: /mcp/*
+Allow: /submit
+
+# Sitemap location
+Sitemap: https://www.mcpcurator.com/sitemap.xml

@@ -1,0 +1,776 @@
+
+> mcp-curator-nextjs@0.1.0 dev
+> next dev --port 3003
+
+ ⚠ Warning: Found multiple lockfiles. Selecting /Users/hirenthakkar/pnpm-lock.yaml.
+   Consider removing the lockfiles at:
+   * /Users/hirenthakkar/Desktop/MCPCurator-Website/mcp-curator-nextjs/package-lock.json
+
+   ▲ Next.js 15.4.4
+   - Local:        http://localhost:3003
+   - Network:      http://192.168.100.228:3003
+
+ ✓ Starting...
+ ✓ Ready in 1766ms
+ ○ Compiling /mcp/[slug] ...
+ ✓ Compiled /mcp/[slug] in 799ms (610 modules)
+ GET /mcp/aws-labs-mcp 200 in 11513ms
+ ✓ Compiled / in 400ms (626 modules)
+ GET / 200 in 1683ms
+ ✓ Compiled /_not-found in 372ms (648 modules)
+ GET /favicon.ico 200 in 560ms
+ GET /site.webmanifest 404 in 560ms
+ ✓ Compiled /directory in 244ms (655 modules)
+ GET /directory?search=fast 200 in 1698ms
+ GET /site.webmanifest 404 in 36ms
+ GET / 200 in 410ms
+ GET /site.webmanifest 404 in 46ms
+ GET /mcp/aws-labs-mcp 200 in 663ms
+ GET /mcp/aws-labs-mcp 200 in 88ms
+ GET /categories 404 in 33ms
+ GET /categories 404 in 51ms
+ GET /site.webmanifest 404 in 50ms
+ GET /mcp/aws-labs-mcp 200 in 215ms
+ GET /site.webmanifest 404 in 52ms
+ GET /directory 200 in 28ms
+ GET / 200 in 72ms
+ ✓ Compiled in 807ms (649 modules)
+ GET / 200 in 127ms
+ ✓ Compiled in 220ms (649 modules)
+ GET / 200 in 73ms
+ ✓ Compiled in 146ms (245 modules)
+ GET /directory 200 in 34ms
+ ✓ Compiled in 172ms (245 modules)
+ GET /directory 200 in 29ms
+ ✓ Compiled in 466ms (635 modules)
+ GET /directory 200 in 525ms
+ GET /directory 200 in 10ms
+ ✓ Compiled in 196ms (245 modules)
+ ✓ Compiled /_not-found in 456ms (640 modules)
+ GET /directory 404 in 531ms
+ GET /directory 200 in 20ms
+ GET /directory 200 in 9ms
+ GET /directory 200 in 1324ms
+ GET /site.webmanifest 404 in 40ms
+ ✓ Compiled /categories in 458ms (645 modules)
+ GET /categories 200 in 691ms
+ GET /directory?search=fast 200 in 1546ms
+ ✓ Compiled /sitemap.xml in 482ms (662 modules)
+ GET /sitemap.xml 200 in 581ms
+ GET /sitemap.xml 200 in 42ms
+ GET / 200 in 1338ms
+ ✓ Compiled /_not-found in 154ms (663 modules)
+ GET /site.webmanifest 404 in 262ms
+ ✓ Compiled /categories in 187ms (430 modules)
+ GET /categories 200 in 277ms
+ ✓ Compiled /category/[category] in 200ms (669 modules)
+ GET /category/utilities 200 in 1460ms
+ GET /directory 200 in 44ms
+ GET / 200 in 1327ms
+ GET / 200 in 34ms
+ GET /directory?search=fast 200 in 1371ms
+ GET /site.webmanifest 404 in 33ms
+ GET / 200 in 55ms
+ GET /directory?search=notion 200 in 854ms
+ GET /site.webmanifest 404 in 31ms
+ GET /mcp/notion-mcp 200 in 477ms
+ GET /mcp/notion-mcp 200 in 57ms
+ GET /mcp/notion-mcp 200 in 122ms
+ ✓ Compiled in 317ms (247 modules)
+ GET /directory?search=notion 200 in 22ms
+ ✓ Compiled in 417ms (657 modules)
+ GET /directory?search=notion 200 in 134ms
+ GET / 200 in 1202ms
+ GET / 200 in 185ms
+ GET /categories 200 in 70ms
+ GET /directory?search=notion 200 in 1307ms
+ ✓ Compiled /_not-found in 358ms (648 modules)
+ GET /site.webmanifest 404 in 479ms
+ GET /mcp/notion-mcp 200 in 2156ms
+ GET /mcp/notion-mcp 200 in 118ms
+Error fetching repo data for https://github.com/microsoft/playwright-mcp: Error: GitHub API rate limit exceeded
+    at GitHubAPI.makeRequest (lib/github-api.ts:79:14)
+    at async GitHubAPI.getRepositoryData (lib/github-api.ts:95:11)
+    at async GitHubAPI.getRepoDataFromUrl (lib/github-api.ts:169:13)
+    at async HomePage (app/page.tsx:18:25)
+  77 |         throw new Error('Repository not found');
+  78 |       } else if (response.status === 403) {
+> 79 |         throw new Error('GitHub API rate limit exceeded');
+     |              ^
+  80 |       } else {
+  81 |         throw new Error(`GitHub API error: ${response.status}`);
+  82 |       }
+Error fetching repo data for https://github.com/awslabs/mcp: Error: GitHub API rate limit exceeded
+    at GitHubAPI.makeRequest (lib/github-api.ts:79:14)
+    at async GitHubAPI.getRepositoryData (lib/github-api.ts:95:11)
+    at async GitHubAPI.getRepoDataFromUrl (lib/github-api.ts:169:13)
+    at async HomePage (app/page.tsx:18:25)
+  77 |         throw new Error('Repository not found');
+  78 |       } else if (response.status === 403) {
+> 79 |         throw new Error('GitHub API rate limit exceeded');
+     |              ^
+  80 |       } else {
+  81 |         throw new Error(`GitHub API error: ${response.status}`);
+  82 |       }
+Error fetching repo data for https://github.com/cloudflare/mcp-server-cloudflare: Error: GitHub API rate limit exceeded
+    at GitHubAPI.makeRequest (lib/github-api.ts:79:14)
+    at async GitHubAPI.getRepositoryData (lib/github-api.ts:95:11)
+    at async GitHubAPI.getRepoDataFromUrl (lib/github-api.ts:169:13)
+    at async HomePage (app/page.tsx:18:25)
+  77 |         throw new Error('Repository not found');
+  78 |       } else if (response.status === 403) {
+> 79 |         throw new Error('GitHub API rate limit exceeded');
+     |              ^
+  80 |       } else {
+  81 |         throw new Error(`GitHub API error: ${response.status}`);
+  82 |       }
+ GET / 200 in 293ms
+ GET /mcp/notion-mcp 200 in 10053ms
+Error fetching GitHub data for https://github.com/microsoft/playwright-mcp: Error: GitHub API rate limit exceeded
+    at GitHubAPI.makeRequest (lib/github-api.ts:79:14)
+    at async GitHubAPI.getRepositoryData (lib/github-api.ts:95:11)
+    at async GitHubAPI.getEnhancedRepositoryData (lib/github-api.ts:138:69)
+    at async MCPToolPage (app/mcp/[slug]/page.tsx:91:17)
+  77 |         throw new Error('Repository not found');
+  78 |       } else if (response.status === 403) {
+> 79 |         throw new Error('GitHub API rate limit exceeded');
+     |              ^
+  80 |       } else {
+  81 |         throw new Error(`GitHub API error: ${response.status}`);
+  82 |       }
+ GET /mcp/playwright-mcp 200 in 1124ms
+Error fetching GitHub data for https://github.com/microsoft/playwright-mcp: Error: GitHub API rate limit exceeded
+    at GitHubAPI.makeRequest (lib/github-api.ts:79:14)
+    at async GitHubAPI.getRepositoryData (lib/github-api.ts:95:11)
+    at async GitHubAPI.getEnhancedRepositoryData (lib/github-api.ts:138:69)
+    at async MCPToolPage (app/mcp/[slug]/page.tsx:91:17)
+  77 |         throw new Error('Repository not found');
+  78 |       } else if (response.status === 403) {
+> 79 |         throw new Error('GitHub API rate limit exceeded');
+     |              ^
+  80 |       } else {
+  81 |         throw new Error(`GitHub API error: ${response.status}`);
+  82 |       }
+ GET /mcp/playwright-mcp 200 in 10183ms
+ ✓ Compiled in 229ms (247 modules)
+ ✓ Compiled in 224ms (247 modules)
+ ✓ Compiled in 73ms (247 modules)
+ ✓ Compiled in 463ms (657 modules)
+Error fetching GitHub data for https://github.com/punkpeye/fastmcp: Error: GitHub API rate limit exceeded
+    at GitHubAPI.makeRequest (lib/github-api.ts:79:14)
+    at async GitHubAPI.getRepositoryData (lib/github-api.ts:95:11)
+    at async GitHubAPI.getEnhancedRepositoryData (lib/github-api.ts:138:69)
+    at async MCPToolPage (app/mcp/[slug]/page.tsx:91:17)
+  77 |         throw new Error('Repository not found');
+  78 |       } else if (response.status === 403) {
+> 79 |         throw new Error('GitHub API rate limit exceeded');
+     |              ^
+  80 |       } else {
+  81 |         throw new Error(`GitHub API error: ${response.status}`);
+  82 |       }
+ GET /mcp/fastmcp 200 in 10211ms
+ ✓ Compiled in 490ms (657 modules)
+ ✓ Compiled in 297ms (657 modules)
+ ✓ Compiled in 122ms (247 modules)
+Error fetching GitHub data for https://github.com/punkpeye/fastmcp: Error: GitHub API rate limit exceeded
+    at GitHubAPI.makeRequest (lib/github-api.ts:79:14)
+    at async GitHubAPI.getRepositoryData (lib/github-api.ts:95:11)
+    at async GitHubAPI.getEnhancedRepositoryData (lib/github-api.ts:138:69)
+    at async MCPToolPage (app/mcp/[slug]/page.tsx:91:17)
+  77 |         throw new Error('Repository not found');
+  78 |       } else if (response.status === 403) {
+> 79 |         throw new Error('GitHub API rate limit exceeded');
+     |              ^
+  80 |       } else {
+  81 |         throw new Error(`GitHub API error: ${response.status}`);
+  82 |       }
+ GET /mcp/fastmcp 200 in 10234ms
+Error fetching repo data for https://github.com/microsoft/playwright-mcp: Error: GitHub API rate limit exceeded
+    at GitHubAPI.makeRequest (lib/github-api.ts:79:14)
+    at async GitHubAPI.getRepositoryData (lib/github-api.ts:95:11)
+    at async GitHubAPI.getRepoDataFromUrl (lib/github-api.ts:169:13)
+    at async HomePage (app/page.tsx:18:25)
+  77 |         throw new Error('Repository not found');
+  78 |       } else if (response.status === 403) {
+> 79 |         throw new Error('GitHub API rate limit exceeded');
+     |              ^
+  80 |       } else {
+  81 |         throw new Error(`GitHub API error: ${response.status}`);
+  82 |       }
+Error fetching repo data for https://github.com/awslabs/mcp: Error: GitHub API rate limit exceeded
+    at GitHubAPI.makeRequest (lib/github-api.ts:79:14)
+    at async GitHubAPI.getRepositoryData (lib/github-api.ts:95:11)
+    at async GitHubAPI.getRepoDataFromUrl (lib/github-api.ts:169:13)
+    at async HomePage (app/page.tsx:18:25)
+  77 |         throw new Error('Repository not found');
+  78 |       } else if (response.status === 403) {
+> 79 |         throw new Error('GitHub API rate limit exceeded');
+     |              ^
+  80 |       } else {
+  81 |         throw new Error(`GitHub API error: ${response.status}`);
+  82 |       }
+Error fetching repo data for https://github.com/cloudflare/mcp-server-cloudflare: Error: GitHub API rate limit exceeded
+    at GitHubAPI.makeRequest (lib/github-api.ts:79:14)
+    at async GitHubAPI.getRepositoryData (lib/github-api.ts:95:11)
+    at async GitHubAPI.getRepoDataFromUrl (lib/github-api.ts:169:13)
+    at async HomePage (app/page.tsx:18:25)
+  77 |         throw new Error('Repository not found');
+  78 |       } else if (response.status === 403) {
+> 79 |         throw new Error('GitHub API rate limit exceeded');
+     |              ^
+  80 |       } else {
+  81 |         throw new Error(`GitHub API error: ${response.status}`);
+  82 |       }
+ GET / 200 in 426ms
+ ✓ Compiled /_not-found in 393ms (648 modules)
+ GET /site.webmanifest 404 in 530ms
+Error fetching GitHub data for https://github.com/microsoft/playwright-mcp: Error: GitHub API rate limit exceeded
+    at GitHubAPI.makeRequest (lib/github-api.ts:79:14)
+    at async GitHubAPI.getRepositoryData (lib/github-api.ts:95:11)
+    at async GitHubAPI.getEnhancedRepositoryData (lib/github-api.ts:138:69)
+    at async MCPToolPage (app/mcp/[slug]/page.tsx:91:17)
+  77 |         throw new Error('Repository not found');
+  78 |       } else if (response.status === 403) {
+> 79 |         throw new Error('GitHub API rate limit exceeded');
+     |              ^
+  80 |       } else {
+  81 |         throw new Error(`GitHub API error: ${response.status}`);
+  82 |       }
+ GET /mcp/playwright-mcp 200 in 1157ms
+Error fetching GitHub data for https://github.com/oraios/serena: Error: GitHub API rate limit exceeded
+    at GitHubAPI.makeRequest (lib/github-api.ts:79:14)
+    at async GitHubAPI.getRepositoryData (lib/github-api.ts:95:11)
+    at async GitHubAPI.getEnhancedRepositoryData (lib/github-api.ts:138:69)
+    at async MCPToolPage (app/mcp/[slug]/page.tsx:91:17)
+  77 |         throw new Error('Repository not found');
+  78 |       } else if (response.status === 403) {
+> 79 |         throw new Error('GitHub API rate limit exceeded');
+     |              ^
+  80 |       } else {
+  81 |         throw new Error(`GitHub API error: ${response.status}`);
+  82 |       }
+ GET /mcp/serena-mcp 200 in 117ms
+Error fetching GitHub data for https://github.com/oraios/serena: Error: GitHub API rate limit exceeded
+    at GitHubAPI.makeRequest (lib/github-api.ts:79:14)
+    at async GitHubAPI.getRepositoryData (lib/github-api.ts:95:11)
+    at async GitHubAPI.getEnhancedRepositoryData (lib/github-api.ts:138:69)
+    at async MCPToolPage (app/mcp/[slug]/page.tsx:91:17)
+  77 |         throw new Error('Repository not found');
+  78 |       } else if (response.status === 403) {
+> 79 |         throw new Error('GitHub API rate limit exceeded');
+     |              ^
+  80 |       } else {
+  81 |         throw new Error(`GitHub API error: ${response.status}`);
+  82 |       }
+ GET /mcp/serena-mcp 200 in 10082ms
+ ✓ Compiled in 545ms (657 modules)
+ ✓ Compiled in 434ms (658 modules)
+Error fetching GitHub data for https://github.com/oraios/serena: TypeError: fetch failed
+    at async GitHubAPI.makeRequest (lib/github-api.ts:73:21)
+    at async GitHubAPI.getRepositoryData (lib/github-api.ts:95:11)
+    at async GitHubAPI.getEnhancedRepositoryData (lib/github-api.ts:138:69)
+    at async MCPToolPage (app/mcp/[slug]/page.tsx:91:17)
+  71 |     }
+  72 |
+> 73 |     const response = await fetch(url, { headers });
+     |                     ^
+  74 |
+  75 |     if (!response.ok) {
+  76 |       if (response.status === 404) { {
+  [cause]: [Error [ConnectTimeoutError]: Connect Timeout Error] {
+    code: 'UND_ERR_CONNECT_TIMEOUT'
+  }
+}
+ GET /mcp/serena-mcp 200 in 10130ms
+ ✓ Compiled in 286ms (658 modules)
+Error fetching GitHub data for https://github.com/oraios/serena: TypeError: fetch failed
+    at async GitHubAPI.makeRequest (lib/github-api.ts:73:21)
+    at async GitHubAPI.getRepositoryData (lib/github-api.ts:95:11)
+    at async GitHubAPI.getEnhancedRepositoryData (lib/github-api.ts:138:69)
+    at async MCPToolPage (app/mcp/[slug]/page.tsx:91:17)
+  71 |     }
+  72 |
+> 73 |     const response = await fetch(url, { headers });
+     |                     ^
+  74 |
+  75 |     if (!response.ok) {
+  76 |       if (response.status === 404) { {
+  [cause]: [Error [ConnectTimeoutError]: Connect Timeout Error] {
+    code: 'UND_ERR_CONNECT_TIMEOUT'
+  }
+}
+ GET /mcp/serena-mcp 200 in 10074ms
+Error fetching GitHub data for https://github.com/oraios/serena: Error: GitHub API rate limit exceeded
+    at GitHubAPI.makeRequest (lib/github-api.ts:79:14)
+    at async GitHubAPI.getRepositoryData (lib/github-api.ts:95:11)
+    at async GitHubAPI.getEnhancedRepositoryData (lib/github-api.ts:138:69)
+    at async MCPToolPage (app/mcp/[slug]/page.tsx:91:17)
+  77 |         throw new Error('Repository not found');
+  78 |       } else if (response.status === 403) {
+> 79 |         throw new Error('GitHub API rate limit exceeded');
+     |              ^
+  80 |       } else {
+  81 |         throw new Error(`GitHub API error: ${response.status}`);
+  82 |       }
+ GET /mcp/serena-mcp 200 in 10092ms
+ ✓ Compiled in 457ms (658 modules)
+Error fetching GitHub data for https://github.com/oraios/serena: Error: GitHub API rate limit exceeded
+    at GitHubAPI.makeRequest (lib/github-api.ts:79:14)
+    at async GitHubAPI.getRepositoryData (lib/github-api.ts:95:11)
+    at async GitHubAPI.getEnhancedRepositoryData (lib/github-api.ts:138:69)
+    at async MCPToolPage (app/mcp/[slug]/page.tsx:91:17)
+  77 |         throw new Error('Repository not found');
+  78 |       } else if (response.status === 403) {
+> 79 |         throw new Error('GitHub API rate limit exceeded');
+     |              ^
+  80 |       } else {
+  81 |         throw new Error(`GitHub API error: ${response.status}`);
+  82 |       }
+ GET /mcp/serena-mcp 200 in 10183ms
+ ✓ Compiled in 311ms (658 modules)
+Error fetching GitHub data for https://github.com/oraios/serena: Error: GitHub API rate limit exceeded
+    at GitHubAPI.makeRequest (lib/github-api.ts:79:14)
+    at async GitHubAPI.getRepositoryData (lib/github-api.ts:95:11)
+    at async GitHubAPI.getEnhancedRepositoryData (lib/github-api.ts:138:69)
+    at async MCPToolPage (app/mcp/[slug]/page.tsx:91:17)
+  77 |         throw new Error('Repository not found');
+  78 |       } else if (response.status === 403) {
+> 79 |         throw new Error('GitHub API rate limit exceeded');
+     |              ^
+  80 |       } else {
+  81 |         throw new Error(`GitHub API error: ${response.status}`);
+  82 |       }
+ GET /mcp/serena-mcp 200 in 10100ms
+ GET /directory?search=notion 200 in 1465ms
+ GET /directory?search=notion 200 in 884ms
+ ✓ Compiled in 867ms (685 modules)
+ ✓ Compiled in 431ms (699 modules)
+Error fetching repo data for https://github.com/microsoft/playwright-mcp: Error: GitHub API rate limit exceeded
+    at GitHubAPI.makeRequest (lib/github-api.ts:79:14)
+    at async GitHubAPI.getRepositoryData (lib/github-api.ts:95:11)
+    at async GitHubAPI.getRepoDataFromUrl (lib/github-api.ts:169:13)
+    at async HomePage (app/page.tsx:19:25)
+  77 |         throw new Error('Repository not found');
+  78 |       } else if (response.status === 403) {
+> 79 |         throw new Error('GitHub API rate limit exceeded');
+     |              ^
+  80 |       } else {
+  81 |         throw new Error(`GitHub API error: ${response.status}`);
+  82 |       }
+Error fetching repo data for https://github.com/awslabs/mcp: Error: GitHub API rate limit exceeded
+    at GitHubAPI.makeRequest (lib/github-api.ts:79:14)
+    at async GitHubAPI.getRepositoryData (lib/github-api.ts:95:11)
+    at async GitHubAPI.getRepoDataFromUrl (lib/github-api.ts:169:13)
+    at async HomePage (app/page.tsx:19:25)
+  77 |         throw new Error('Repository not found');
+  78 |       } else if (response.status === 403) {
+> 79 |         throw new Error('GitHub API rate limit exceeded');
+     |              ^
+  80 |       } else {
+  81 |         throw new Error(`GitHub API error: ${response.status}`);
+  82 |       }
+Error fetching repo data for https://github.com/cloudflare/mcp-server-cloudflare: Error: GitHub API rate limit exceeded
+    at GitHubAPI.makeRequest (lib/github-api.ts:79:14)
+    at async GitHubAPI.getRepositoryData (lib/github-api.ts:95:11)
+    at async GitHubAPI.getRepoDataFromUrl (lib/github-api.ts:169:13)
+    at async HomePage (app/page.tsx:19:25)
+  77 |         throw new Error('Repository not found');
+  78 |       } else if (response.status === 403) {
+> 79 |         throw new Error('GitHub API rate limit exceeded');
+     |              ^
+  80 |       } else {
+  81 |         throw new Error(`GitHub API error: ${response.status}`);
+  82 |       }
+ GET / 200 in 144ms
+Error fetching GitHub data for https://github.com/oraios/serena: Error: GitHub API rate limit exceeded
+    at GitHubAPI.makeRequest (lib/github-api.ts:79:14)
+    at async GitHubAPI.getRepositoryData (lib/github-api.ts:95:11)
+    at async GitHubAPI.getEnhancedRepositoryData (lib/github-api.ts:138:69)
+    at async MCPToolPage (app/mcp/[slug]/page.tsx:91:17)
+  77 |         throw new Error('Repository not found');
+  78 |       } else if (response.status === 403) {
+> 79 |         throw new Error('GitHub API rate limit exceeded');
+     |              ^
+  80 |       } else {
+  81 |         throw new Error(`GitHub API error: ${response.status}`);
+  82 |       }
+ ✓ Compiled /_not-found in 350ms (690 modules)
+ GET /logo.png 404 in 457ms
+ ⨯ The requested resource isn't a valid image for /logo.png received text/html; charset=utf-8
+ GET /mcp/serena-mcp 200 in 2322ms
+Error fetching repo data for https://github.com/microsoft/playwright-mcp: Error: GitHub API rate limit exceeded
+    at GitHubAPI.makeRequest (lib/github-api.ts:79:14)
+    at async GitHubAPI.getRepositoryData (lib/github-api.ts:95:11)
+    at async GitHubAPI.getRepoDataFromUrl (lib/github-api.ts:169:13)
+    at async HomePage (app/page.tsx:19:25)
+  77 |         throw new Error('Repository not found');
+  78 |       } else if (response.status === 403) {
+> 79 |         throw new Error('GitHub API rate limit exceeded');
+     |              ^
+  80 |       } else {
+  81 |         throw new Error(`GitHub API error: ${response.status}`);
+  82 |       }
+Error fetching repo data for https://github.com/awslabs/mcp: Error: GitHub API rate limit exceeded
+    at GitHubAPI.makeRequest (lib/github-api.ts:79:14)
+    at async GitHubAPI.getRepositoryData (lib/github-api.ts:95:11)
+    at async GitHubAPI.getRepoDataFromUrl (lib/github-api.ts:169:13)
+    at async HomePage (app/page.tsx:19:25)
+  77 |         throw new Error('Repository not found');
+  78 |       } else if (response.status === 403) {
+> 79 |         throw new Error('GitHub API rate limit exceeded');
+     |              ^
+  80 |       } else {
+  81 |         throw new Error(`GitHub API error: ${response.status}`);
+  82 |       }
+Error fetching repo data for https://github.com/cloudflare/mcp-server-cloudflare: Error: GitHub API rate limit exceeded
+    at GitHubAPI.makeRequest (lib/github-api.ts:79:14)
+    at async GitHubAPI.getRepositoryData (lib/github-api.ts:95:11)
+    at async GitHubAPI.getRepoDataFromUrl (lib/github-api.ts:169:13)
+    at async HomePage (app/page.tsx:19:25)
+  77 |         throw new Error('Repository not found');
+  78 |       } else if (response.status === 403) {
+> 79 |         throw new Error('GitHub API rate limit exceeded');
+     |              ^
+  80 |       } else {
+  81 |         throw new Error(`GitHub API error: ${response.status}`);
+  82 |       }
+ GET / 200 in 194ms
+ GET /mcp/serena-mcp 200 in 9889ms
+ GET /logo.png 404 in 35ms
+ ⨯ The requested resource isn't a valid image for /logo.png received text/html; charset=utf-8
+Error fetching GitHub data for https://github.com/oraios/serena: Error: GitHub API rate limit exceeded
+    at GitHubAPI.makeRequest (lib/github-api.ts:79:14)
+    at async GitHubAPI.getRepositoryData (lib/github-api.ts:95:11)
+    at async GitHubAPI.getEnhancedRepositoryData (lib/github-api.ts:138:69)
+    at async MCPToolPage (app/mcp/[slug]/page.tsx:91:17)
+  77 |         throw new Error('Repository not found');
+  78 |       } else if (response.status === 403) {
+> 79 |         throw new Error('GitHub API rate limit exceeded');
+     |              ^
+  80 |       } else {
+  81 |         throw new Error(`GitHub API error: ${response.status}`);
+  82 |       }
+ ✓ Compiled in 535ms (704 modules)
+ ✓ Compiled /favicon.ico in 351ms (707 modules)
+ GET /favicon.ico 200 in 568ms
+ GET /apple-touch-icon.png 404 in 523ms
+Error fetching repo data for https://github.com/microsoft/playwright-mcp: Error: GitHub API rate limit exceeded
+    at GitHubAPI.makeRequest (lib/github-api.ts:79:14)
+    at async GitHubAPI.getRepositoryData (lib/github-api.ts:95:11)
+    at async GitHubAPI.getRepoDataFromUrl (lib/github-api.ts:169:13)
+    at async HomePage (app/page.tsx:19:25)
+  77 |         throw new Error('Repository not found');
+  78 |       } else if (response.status === 403) {
+> 79 |         throw new Error('GitHub API rate limit exceeded');
+     |              ^
+  80 |       } else {
+  81 |         throw new Error(`GitHub API error: ${response.status}`);
+  82 |       }
+Error fetching repo data for https://github.com/awslabs/mcp: Error: GitHub API rate limit exceeded
+    at GitHubAPI.makeRequest (lib/github-api.ts:79:14)
+    at async GitHubAPI.getRepositoryData (lib/github-api.ts:95:11)
+    at async GitHubAPI.getRepoDataFromUrl (lib/github-api.ts:169:13)
+    at async HomePage (app/page.tsx:19:25)
+  77 |         throw new Error('Repository not found');
+  78 |       } else if (response.status === 403) {
+> 79 |         throw new Error('GitHub API rate limit exceeded');
+     |              ^
+  80 |       } else {
+  81 |         throw new Error(`GitHub API error: ${response.status}`);
+  82 |       }
+Error fetching repo data for https://github.com/cloudflare/mcp-server-cloudflare: Error: GitHub API rate limit exceeded
+    at GitHubAPI.makeRequest (lib/github-api.ts:79:14)
+    at async GitHubAPI.getRepositoryData (lib/github-api.ts:95:11)
+    at async GitHubAPI.getRepoDataFromUrl (lib/github-api.ts:169:13)
+    at async HomePage (app/page.tsx:19:25)
+  77 |         throw new Error('Repository not found');
+  78 |       } else if (response.status === 403) {
+> 79 |         throw new Error('GitHub API rate limit exceeded');
+     |              ^
+  80 |       } else {
+  81 |         throw new Error(`GitHub API error: ${response.status}`);
+  82 |       }
+ GET / 200 in 432ms
+ GET /logo.png 404 in 29ms
+ ⨯ The requested resource isn't a valid image for /logo.png received text/html; charset=utf-8
+ GET /logo.png 404 in 25ms
+ ⨯ The requested resource isn't a valid image for /logo.png received text/html; charset=utf-8
+ GET /apple-touch-icon.png 404 in 53ms
+ ✓ Compiled in 338ms (721 modules)
+ GET / 200 in 132ms
+ GET / 200 in 46ms
+ GET / 200 in 218ms
+ GET /favicon.ico 200 in 20ms
+ GET /apple-touch-icon.png 404 in 34ms
+ ✓ Compiled in 371ms (721 modules)
+ GET / 200 in 85ms
+ ✓ Compiled in 437ms (680 modules)
+ GET / 200 in 128ms
+ GET / 200 in 405ms
+ GET /favicon.ico 200 in 33ms
+ GET /apple-touch-icon.png 404 in 32ms
+ GET / 200 in 186ms
+ GET /apple-touch-icon.png 404 in 34ms
+ GET / 200 in 54ms
+ HEAD / 200 in 98ms
+ GET / 200 in 295ms
+ GET /favicon.ico 200 in 30ms
+ GET /apple-touch-icon.png 404 in 45ms
+ GET /categories 200 in 106ms
+ GET / 200 in 65ms
+ ✓ Compiled in 582ms (707 modules)
+ GET / 200 in 162ms
+ ✓ Compiled in 287ms (721 modules)
+ GET / 200 in 101ms
+ GET / 200 in 237ms
+ GET /favicon.ico 200 in 21ms
+ GET /apple-touch-icon.png 404 in 31ms
+ ✓ Compiled in 193ms (721 modules)
+ GET / 200 in 63ms
+ GET / 200 in 95ms
+ GET / 200 in 54ms
+ GET / 200 in 214ms
+ GET /apple-touch-icon.png 404 in 57ms
+ GET / 200 in 111ms
+ GET / 200 in 316ms
+ GET /favicon.ico 200 in 45ms
+ ✓ Compiled in 248ms (265 modules)
+ GET / 200 in 87ms
+ GET / 200 in 249ms
+ GET /favicon.ico 200 in 8ms
+ GET / 200 in 169ms
+ GET /favicon.ico 200 in 9ms
+ ✓ Compiled in 165ms (261 modules)
+ GET / 200 in 83ms
+ GET / 200 in 88ms
+ ✓ Compiled in 559ms (716 modules)
+ GET / 200 in 138ms
+ GET / 200 in 139ms
+ GET /mcp/playwright-mcp 200 in 2199ms
+Error fetching GitHub data for https://github.com/xspadex/bilibili-mcp.git: Error: GitHub API rate limit exceeded
+    at GitHubAPI.makeRequest (lib/github-api.ts:79:14)
+    at async GitHubAPI.getRepositoryData (lib/github-api.ts:95:11)
+    at async GitHubAPI.getEnhancedRepositoryData (lib/github-api.ts:138:69)
+    at async MCPToolPage (app/mcp/[slug]/page.tsx:91:17)
+  77 |         throw new Error('Repository not found');
+  78 |       } else if (response.status === 403) {
+> 79 |         throw new Error('GitHub API rate limit exceeded');
+     |              ^
+  80 |       } else {
+  81 |         throw new Error(`GitHub API error: ${response.status}`);
+  82 |       }
+ GET /mcp/bilibili-mcpgit 200 in 2145ms
+Error fetching GitHub data for https://github.com/xspadex/bilibili-mcp.git: Error: GitHub API rate limit exceeded
+    at GitHubAPI.makeRequest (lib/github-api.ts:79:14)
+    at async GitHubAPI.getRepositoryData (lib/github-api.ts:95:11)
+    at async GitHubAPI.getEnhancedRepositoryData (lib/github-api.ts:138:69)
+    at async MCPToolPage (app/mcp/[slug]/page.tsx:91:17)
+  77 |         throw new Error('Repository not found');
+  78 |       } else if (response.status === 403) {
+> 79 |         throw new Error('GitHub API rate limit exceeded');
+     |              ^
+  80 |       } else {
+  81 |         throw new Error(`GitHub API error: ${response.status}`);
+  82 |       }
+ GET /mcp/bilibili-mcpgit 200 in 10057ms
+ GET / 200 in 70ms
+ ○ Compiling /_error ...
+ ✓ Compiled /_error in 1063ms (1013 modules)
+ GET / 200 in 943ms
+ GET / 200 in 945ms
+ GET / 200 in 73ms
+ GET / 200 in 74ms
+ ⨯ A conflicting public file and page file was found for path /favicon.ico https://nextjs.org/docs/messages/conflicting-public-file-page
+ GET /favicon.ico 500 in 1612ms
+ ⨯ A conflicting public file and page file was found for path /favicon.ico https://nextjs.org/docs/messages/conflicting-public-file-page
+ GET /favicon.ico 500 in 214ms
+Error fetching GitHub data for https://github.com/xspadex/bilibili-mcp.git: Error: GitHub API rate limit exceeded
+    at GitHubAPI.makeRequest (lib/github-api.ts:79:14)
+    at async GitHubAPI.getRepositoryData (lib/github-api.ts:95:11)
+    at async GitHubAPI.getEnhancedRepositoryData (lib/github-api.ts:138:69)
+    at async MCPToolPage (app/mcp/[slug]/page.tsx:91:17)
+  77 |         throw new Error('Repository not found');
+  78 |       } else if (response.status === 403) {
+> 79 |         throw new Error('GitHub API rate limit exceeded');
+     |              ^
+  80 |       } else {
+  81 |         throw new Error(`GitHub API error: ${response.status}`);
+  82 |       }
+ ⨯ [TypeError: __webpack_modules__[moduleId] is not a function] {
+  digest: '1126945575'
+}
+ GET /mcp/bilibili-mcpgit 500 in 10398ms
+ ⨯ A conflicting public file and page file was found for path /favicon.ico https://nextjs.org/docs/messages/conflicting-public-file-page
+ GET /favicon.ico 500 in 212ms
+ ⨯ A conflicting public file and page file was found for path /favicon.ico https://nextjs.org/docs/messages/conflicting-public-file-page
+ GET /favicon.ico 500 in 215ms
+ GET / 200 in 61ms
+ ⨯ A conflicting public file and page file was found for path /favicon.ico https://nextjs.org/docs/messages/conflicting-public-file-page
+ GET /favicon.ico 500 in 212ms
+ GET / 200 in 109ms
+ GET /category/utilities 200 in 1073ms
+ ⨯ A conflicting public file and page file was found for path /favicon.ico https://nextjs.org/docs/messages/conflicting-public-file-page
+ GET /favicon.ico 500 in 233ms
+ ⨯ A conflicting public file and page file was found for path /favicon.ico https://nextjs.org/docs/messages/conflicting-public-file-page
+ GET /favicon.ico 500 in 215ms
+ GET / 200 in 68ms
+ ⨯ A conflicting public file and page file was found for path /favicon.ico https://nextjs.org/docs/messages/conflicting-public-file-page
+ GET /favicon.ico 500 in 214ms
+ GET /category/automation 200 in 92ms
+ ⨯ A conflicting public file and page file was found for path /favicon.ico https://nextjs.org/docs/messages/conflicting-public-file-page
+ GET /favicon.ico 500 in 256ms
+ GET / 200 in 72ms
+ ⨯ A conflicting public file and page file was found for path /favicon.ico https://nextjs.org/docs/messages/conflicting-public-file-page
+ GET /favicon.ico 500 in 216ms
+ GET /mcp/playwright-mcp 200 in 104ms
+ ⨯ A conflicting public file and page file was found for path /favicon.ico https://nextjs.org/docs/messages/conflicting-public-file-page
+ GET /favicon.ico 500 in 214ms
+ ⨯ A conflicting public file and page file was found for path /favicon.ico https://nextjs.org/docs/messages/conflicting-public-file-page
+ GET /favicon.ico 500 in 214ms
+ GET / 200 in 54ms
+ ⨯ A conflicting public file and page file was found for path /favicon.ico https://nextjs.org/docs/messages/conflicting-public-file-page
+ GET /favicon.ico 500 in 217ms
+ GET /mcp/playwright-mcp 200 in 10112ms
+ ○ Compiling /_not-found ...
+ ✓ Compiled /_not-found in 555ms (1018 modules)
+ GET / 404 in 746ms
+ GET /_next/static/css/app/layout.css?v=1753853929563 404 in 112ms
+ GET /_next/static/chunks/main-app.js?v=1753853929563 404 in 128ms
+ GET /_next/static/chunks/app-pages-internals.js 404 in 127ms
+ ⨯ [Error: ENOENT: no such file or directory, open '/Users/hirenthakkar/Desktop/MCPCurator-Website/mcp-curator-nextjs/.next/server/pages/_document.js'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/Users/hirenthakkar/Desktop/MCPCurator-Website/mcp-curator-nextjs/.next/server/pages/_document.js'
+}
+ ⨯ A conflicting public file and page file was found for path /favicon.ico https://nextjs.org/docs/messages/conflicting-public-file-page
+ GET /favicon.ico 500 in 612ms
+ ⨯ [Error: ENOENT: no such file or directory, open '/Users/hirenthakkar/Desktop/MCPCurator-Website/mcp-curator-nextjs/.next/server/pages/_document.js'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/Users/hirenthakkar/Desktop/MCPCurator-Website/mcp-curator-nextjs/.next/server/pages/_document.js'
+}
+ ⨯ A conflicting public file and page file was found for path /favicon.ico https://nextjs.org/docs/messages/conflicting-public-file-page
+ GET /favicon.ico 500 in 33ms
+ ✓ Compiled in 603ms (1032 modules)
+ GET /_next/static/css/app/layout.css?v=1753853988430 404 in 60ms
+ GET / 200 in 158ms
+ ✓ Compiled in 562ms (1032 modules)
+ GET /_next/static/css/app/layout.css?v=1753853994564 404 in 43ms
+ GET / 200 in 130ms
+ ✓ Compiled in 434ms (890 modules)
+ GET / 200 in 160ms
+ GET /_next/static/css/app/layout.css?v=1753854001516 404 in 66ms
+ ✓ Compiled in 190ms (904 modules)
+ GET / 200 in 79ms
+ GET /_next/static/css/app/layout.css?v=1753854004750 404 in 62ms
+ ✓ Compiled /_error in 481ms (977 modules)
+ ⨯ [Error: ENOENT: no such file or directory, open '/Users/hirenthakkar/Desktop/MCPCurator-Website/mcp-curator-nextjs/.next/server/pages/_document.js'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/Users/hirenthakkar/Desktop/MCPCurator-Website/mcp-curator-nextjs/.next/server/pages/_document.js'
+}
+ GET / 500 in 562ms
+ ⨯ [Error: ENOENT: no such file or directory, open '/Users/hirenthakkar/Desktop/MCPCurator-Website/mcp-curator-nextjs/.next/server/app/_not-found/page.js'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/Users/hirenthakkar/Desktop/MCPCurator-Website/mcp-curator-nextjs/.next/server/app/_not-found/page.js'
+}
+ ⨯ [Error: ENOENT: no such file or directory, open '/Users/hirenthakkar/Desktop/MCPCurator-Website/mcp-curator-nextjs/.next/server/app/_not-found/page.js'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/Users/hirenthakkar/Desktop/MCPCurator-Website/mcp-curator-nextjs/.next/server/app/_not-found/page.js'
+}
+ ⨯ [Error: ENOENT: no such file or directory, open '/Users/hirenthakkar/Desktop/MCPCurator-Website/mcp-curator-nextjs/.next/server/app/_not-found/page.js'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/Users/hirenthakkar/Desktop/MCPCurator-Website/mcp-curator-nextjs/.next/server/app/_not-found/page.js'
+}
+ ⨯ [Error: ENOENT: no such file or directory, open '/Users/hirenthakkar/Desktop/MCPCurator-Website/mcp-curator-nextjs/.next/server/app/_not-found/page.js'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/Users/hirenthakkar/Desktop/MCPCurator-Website/mcp-curator-nextjs/.next/server/app/_not-found/page.js'
+}
+ ⨯ [Error: ENOENT: no such file or directory, open '/Users/hirenthakkar/Desktop/MCPCurator-Website/mcp-curator-nextjs/.next/server/app/_not-found/page.js'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/Users/hirenthakkar/Desktop/MCPCurator-Website/mcp-curator-nextjs/.next/server/app/_not-found/page.js'
+}
+ GET /_next/static/chunks/fallback/webpack.js 500 in 142ms
+ GET /_next/static/chunks/fallback/main.js 500 in 141ms
+ GET /_next/static/chunks/fallback/react-refresh.js 500 in 136ms
+ GET /_next/static/chunks/fallback/pages/_app.js 500 in 127ms
+ GET /_next/static/chunks/fallback/pages/_error.js 500 in 128ms
+ ⨯ [Error: ENOENT: no such file or directory, open '/Users/hirenthakkar/Desktop/MCPCurator-Website/mcp-curator-nextjs/.next/server/pages/_document.js'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/Users/hirenthakkar/Desktop/MCPCurator-Website/mcp-curator-nextjs/.next/server/pages/_document.js'
+}
+ ⨯ A conflicting public file and page file was found for path /favicon.ico https://nextjs.org/docs/messages/conflicting-public-file-page
+ GET /favicon.ico 500 in 32ms
+ ⨯ [Error: ENOENT: no such file or directory, open '/Users/hirenthakkar/Desktop/MCPCurator-Website/mcp-curator-nextjs/.next/server/app/page.js'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/Users/hirenthakkar/Desktop/MCPCurator-Website/mcp-curator-nextjs/.next/server/app/page.js',
+  page: '/'
+}
+ ⨯ [Error: ENOENT: no such file or directory, open '/Users/hirenthakkar/Desktop/MCPCurator-Website/mcp-curator-nextjs/.next/server/pages/_document.js'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/Users/hirenthakkar/Desktop/MCPCurator-Website/mcp-curator-nextjs/.next/server/pages/_document.js'
+}
+ GET / 500 in 66ms
+ ⨯ [Error: ENOENT: no such file or directory, open '/Users/hirenthakkar/Desktop/MCPCurator-Website/mcp-curator-nextjs/.next/server/app/_not-found/page.js'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/Users/hirenthakkar/Desktop/MCPCurator-Website/mcp-curator-nextjs/.next/server/app/_not-found/page.js'
+}
+ ⨯ [Error: ENOENT: no such file or directory, open '/Users/hirenthakkar/Desktop/MCPCurator-Website/mcp-curator-nextjs/.next/server/app/_not-found/page.js'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/Users/hirenthakkar/Desktop/MCPCurator-Website/mcp-curator-nextjs/.next/server/app/_not-found/page.js'
+}
+ ⨯ [Error: ENOENT: no such file or directory, open '/Users/hirenthakkar/Desktop/MCPCurator-Website/mcp-curator-nextjs/.next/server/app/_not-found/page.js'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/Users/hirenthakkar/Desktop/MCPCurator-Website/mcp-curator-nextjs/.next/server/app/_not-found/page.js'
+}
+ GET /_next/static/chunks/fallback/webpack.js 500 in 75ms
+ GET /_next/static/chunks/fallback/main.js 500 in 74ms
+ GET /_next/static/chunks/fallback/react-refresh.js 500 in 73ms
+ ⨯ [Error: ENOENT: no such file or directory, open '/Users/hirenthakkar/Desktop/MCPCurator-Website/mcp-curator-nextjs/.next/server/app/_not-found/page.js'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/Users/hirenthakkar/Desktop/MCPCurator-Website/mcp-curator-nextjs/.next/server/app/_not-found/page.js'
+}
+ ⨯ [Error: ENOENT: no such file or directory, open '/Users/hirenthakkar/Desktop/MCPCurator-Website/mcp-curator-nextjs/.next/server/app/_not-found/page.js'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/Users/hirenthakkar/Desktop/MCPCurator-Website/mcp-curator-nextjs/.next/server/app/_not-found/page.js'
+}
+ GET /_next/static/chunks/fallback/pages/_app.js 500 in 35ms
+ GET /_next/static/chunks/fallback/pages/_error.js 500 in 35ms
+ ⨯ [Error: ENOENT: no such file or directory, open '/Users/hirenthakkar/Desktop/MCPCurator-Website/mcp-curator-nextjs/.next/server/pages/_document.js'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/Users/hirenthakkar/Desktop/MCPCurator-Website/mcp-curator-nextjs/.next/server/pages/_document.js'
+}
+ ⨯ A conflicting public file and page file was found for path /favicon.ico https://nextjs.org/docs/messages/conflicting-public-file-page
+ GET /favicon.ico 500 in 29ms
+[?25h
