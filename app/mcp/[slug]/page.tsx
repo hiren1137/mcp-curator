@@ -1,7 +1,6 @@
 import { getAllTools, getToolBySlug, generateSlug, getToolsByCategory } from '@/lib/mcp-data';
 import { MCPTool } from '@/lib/types';
 import Link from 'next/link';
-import Image from 'next/image';
 import { notFound } from 'next/navigation';
 import { Metadata } from 'next';
 import { CopyButton, CodeBlock } from './components';
@@ -375,27 +374,18 @@ export default async function MCPToolPage({ params }: Props) {
             {displayContributors && displayContributors.length > 0 && (
               <div className="bg-white/80 backdrop-blur-xl rounded-2xl p-6 shadow-lg border border-slate-200/60">
                 <h3 className="text-lg font-semibold text-slate-900 mb-4">👥 Contributors</h3>
-                <div className="space-y-3">
+                <div className="space-y-2">
                   {displayContributors.slice(0, 5).map((contributor) => (
-                    <div key={contributor.login} className="flex items-center space-x-3">
-                      <Image 
-                        src={contributor.avatar_url} 
-                        alt={contributor.login}
-                        width={32}
-                        height={32}
-                        className="w-8 h-8 rounded-full"
-                      />
-                      <div className="flex-1">
-                        <a 
-                          href={contributor.html_url}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="text-blue-600 hover:text-blue-700 font-medium text-sm"
-                        >
-                          {contributor.login}
-                        </a>
-                        <p className="text-xs text-slate-500">{contributor.contributions} contributions</p>
-                      </div>
+                    <div key={contributor.login} className="flex items-center justify-between">
+                      <a 
+                        href={contributor.html_url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-blue-600 hover:text-blue-700 font-medium text-sm"
+                      >
+                        {contributor.login}
+                      </a>
+                      <span className="text-xs text-slate-500">{contributor.contributions} contributions</span>
                     </div>
                   ))}
                 </div>
