@@ -1,6 +1,7 @@
 import { getAllTools, getToolBySlug, generateSlug, getToolsByCategory } from '@/lib/mcp-data';
 import { MCPTool } from '@/lib/types';
 import Link from 'next/link';
+import Image from 'next/image';
 import { notFound } from 'next/navigation';
 import { Metadata } from 'next';
 import { CopyButton, CodeBlock } from './components';
@@ -377,9 +378,11 @@ export default async function MCPToolPage({ params }: Props) {
                 <div className="space-y-3">
                   {displayContributors.slice(0, 5).map((contributor) => (
                     <div key={contributor.login} className="flex items-center space-x-3">
-                      <img 
+                      <Image 
                         src={contributor.avatar_url} 
                         alt={contributor.login}
+                        width={32}
+                        height={32}
                         className="w-8 h-8 rounded-full"
                       />
                       <div className="flex-1">

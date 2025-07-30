@@ -3,7 +3,7 @@
 import { useState, useMemo, useEffect } from 'react';
 import { useSearchParams } from 'next/navigation';
 import { getAllTools, getCategories } from '@/lib/mcp-data';
-import { ToolCard } from '../page';
+import { ToolCard } from './ToolCard';
 
 export default function DirectoryContent() {
   const searchParams = useSearchParams();
